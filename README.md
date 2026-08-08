@@ -19,4 +19,11 @@ This project cleans and standardizes a 2362 row layoffs dataset exported from Gi
 
 ## ⚙️ Methodology
 
+- Duplicate removal — ROW_NUMBER() + PARTITION BY on key fields (i.e. the column(s) used to identify duplicate records, company, location, industry, total_laid_off, percentage_laid_off, `date`) then deleted rows where row_num > 1
+- Text standardization — TRIM()
+- Inconsistent value correction —  UPDATE + SET + WHERE
+- Special character cleanup — TRIM(TRAILING...)
+- Date standardization — STR_TO_DATE() with explicit format and modify to the date type
+- Missing value handling  —  self-joins to fill gaps in one field (e.g. industry) using another record that matches on a shared field (e.g. same company)
+- Removal of unusable rows — deleting records where all key metrics are missing (verified with a SELECT before running DELETE)
 
