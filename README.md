@@ -1,5 +1,5 @@
 # Layoffs Data cleaning - SQL
 
-🛠 Tools Used :
+## 🛠 Tools Used :
 
--SQL (aggregation, window functions, CTE)
+- SQL (aggregation, window functions, CTE)
