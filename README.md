@@ -11,7 +11,12 @@ This project cleans and standardizes a 2362 row layoffs dataset exported from Gi
 ## 🔍 Data Issues Identified
 
 - Duplicates rows 
-- Blank values in industry
+- Blank values in the column of industry
 - Inconsistent date formats (DD/MM/YYYY vs YYYY-MM-DD)
-- Inconsistent formats (special characters, incoherent values)
-- Extra whitespace 
+- Extra whitespace
+- Inconsistent values (e.g. conflicting entries for the same field)
+- Special characters and encoding issues (e.g. symbols)
+
+## ⚙️ Methodology
+
+
