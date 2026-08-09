@@ -105,6 +105,7 @@ UPDATE layoffs_copie2
 SET industry = 'Crypto'
 WHERE industry LIKE 'Crypto%';
 ```
+https://github.com/Aboubaker-data/sql-data-cleaning-project/blob/main/Inconsistent_value.png
 
 Special character cleanup and update the table 
 
