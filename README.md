@@ -125,3 +125,9 @@ UPDATE layoffs_copie2
 SET  country = TRIM(TRAILING '.' FROM country)
 WHERE country LIKE 'United States%';
 ```
+
+## 💡 What I Learned
+
+- How to identify and handle data quality issues (duplicates, nulls, inconsistent formats) in SQL
+- How to use window functions (ROW_NUMBER(), PARTITION BY) to deduplicate data
+- How to standardize text and date fields with built-in SQL functions
