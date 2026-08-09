@@ -44,6 +44,8 @@ SELECT *
 FROM duplicate_cte
 WHERE row_num > 1 ;
 
+https://github.com/Aboubaker-data/sql-data-cleaning-project/blob/main/Row_duplicates.png
+
 
 CREATE TABLE `layoffs_copie2` (
   `company` text,
