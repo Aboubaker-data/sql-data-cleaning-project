@@ -11,8 +11,8 @@ This project cleans and standardizes a 2362 row layoffs dataset exported from ka
 ## 🔍 Data Issues Identified
 
 - Duplicates rows 
-- Blank values in the column of industry
-- Inconsistent date formats (DD/MM/YYYY vs YYYY-MM-DD)
+- Null and blank values 
+- Inconsistent date formats
 - Extra whitespace
 - Inconsistent values (e.g. conflicting entries for the same field)
 - Special characters and encoding issues (e.g. symbols)
@@ -21,7 +21,7 @@ This project cleans and standardizes a 2362 row layoffs dataset exported from ka
 
 - Duplicate removal — ROW_NUMBER() + PARTITION BY on key fields (i.e. the column(s) used to identify duplicate records, company, location, industry, total_laid_off, percentage_laid_off, `date`) then deleted rows where row_num > 1
 - Text standardization — TRIM()
-- Inconsistent value correction —  UPDATE + SET + WHERE
+- Inconsistent value correction —  standardized conflicting entries (e.g. merging Crypto, CryptoCurrency into a single Crypto value) using UPDATE + WHERE ... LIKE)
 - Special character cleanup — TRIM(TRAILING...)
 - Date standardization — STR_TO_DATE() with explicit format and modify to the date type
 - Missing value handling  —  self-joins to fill gaps in one field (e.g. industry) using another record that matches on a shared field (e.g. same company)
