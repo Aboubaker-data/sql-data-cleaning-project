@@ -79,6 +79,7 @@ DELETE
 FROM layoffs_copie2
 WHERE row_num > 1;
 ```
+https://github.com/Aboubaker-data/sql-data-cleaning-project/blob/main/Row_cleaned.png
 
 
 Standardizing Data and update the table layoffs_copie2
