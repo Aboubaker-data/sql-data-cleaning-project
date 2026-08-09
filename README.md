@@ -94,7 +94,7 @@ UPDATE layoffs_copie2
 SET company = TRIM(company);
 ```
 
-Inconsistent values correction
+Inconsistent values correction and update the table
 
 ```sql
 SELECT *
