@@ -30,6 +30,17 @@ This project cleans and standardizes a 2362 row layoffs dataset exported from Gi
 ## 💻 Query Examples
 
 Removing duplicates :
+WITH duplicate_cte AS
+(
+SELECT *,
+ROW_NUMBER() OVER(
+PARTITION BY company, location, industry, total_laid_off, percentage_laid_off, `date`,
+stage, country, funds_raised_millions) AS row_num
+FROM layoffs_copie
+)
+SELECT *
+FROM duplicate_cte
+WHERE row_num > 1;
 
 
 WITH duplicate_cte AS 
@@ -44,7 +55,7 @@ SELECT *
 FROM duplicate_cte
 WHERE row_num > 1 ;
 
-https://github.com/Aboubaker-data/sql-data-cleaning-project/blob/main/Row_duplicates.png
+
 
 
 CREATE TABLE `layoffs_copie2` (
