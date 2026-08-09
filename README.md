@@ -80,6 +80,7 @@ FROM layoffs_copie2
 WHERE row_num > 1;
 ```
 
+
 Standardizing Data and update the table layoffs_copie2
 
 ```sql
