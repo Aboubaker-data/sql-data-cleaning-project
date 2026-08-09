@@ -106,7 +106,7 @@ SET industry = 'Crypto'
 WHERE industry LIKE 'Crypto%';
 ```
 
-Special character cleanup and update the table
+Special character cleanup and update the table 
 
 ```sql
 
