@@ -6,7 +6,7 @@
 
 ## 📈 Project Overview 
 
-This project cleans and standardizes a 2362 row layoffs dataset exported from Github. The raw data contained duplicates, null and blank values, and inconsistent formats — the goal was to produce a reliable, well-structured dataset ready for data exploration.
+This project cleans and standardizes a 2362 row layoffs dataset exported from kaggle. The raw data contained duplicates, null and blank values, and inconsistent formats — the goal was to produce a reliable, well-structured dataset ready for data exploration.
 
 ## 🔍 Data Issues Identified
 
@@ -76,5 +76,28 @@ FROM layoffs_copie2
 WHERE row_num > 1;
 ```
 
+Standardizing Data and update the table layoffs_copie2
+
+```sql
+
+SELECT company, TRIM(company)
+FROM layoffs_copie2;
+
+
+UPDATE layoffs_copie2
+SET company = TRIM(company);
+```
+
+Inconsistent values correction
+
+```sql
+SELECT *
+FROM layoffs_copie2
+WHERE industry LIKE 'Crypto%';
+
+UPDATE layoffs_copie2
+SET industry = 'Crypto'
+WHERE industry LIKE 'Crypto%';
+```
 
 
