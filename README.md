@@ -100,4 +100,21 @@ SET industry = 'Crypto'
 WHERE industry LIKE 'Crypto%';
 ```
 
+Special character cleanup and update the table
 
+```sql
+
+SELECT *
+FROM layoffs_copie2
+WHERE country LIKE 'United States%'
+ORDER BY 1;
+
+SELECT DISTINCT country, TRIM(TRAILING '.' FROM country)
+FROM layoffs_copie2
+ORDER BY 1;
+
+
+UPDATE layoffs_copie2
+SET  country = TRIM(TRAILING '.' FROM country)
+WHERE country LIKE 'United States%';
+```
