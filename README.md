@@ -32,7 +32,6 @@ This project cleans and standardizes a 2362 row layoffs dataset exported from Gi
 Removing duplicates :
 
 '''sql
-
 WITH duplicate_cte AS
 (
 SELECT *,
@@ -44,7 +43,7 @@ FROM layoffs_copie
 SELECT *
 FROM duplicate_cte
 WHERE row_num > 1;
-
+'''
 
 WITH duplicate_cte AS 
 (
