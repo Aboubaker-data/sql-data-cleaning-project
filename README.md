@@ -30,7 +30,9 @@ This project cleans and standardizes a 2362 row layoffs dataset exported from Gi
 ## 💻 Query Examples
 
 Removing duplicates :
+
 '''sql
+
 WITH duplicate_cte AS
 (
 SELECT *,
